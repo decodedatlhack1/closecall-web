@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cranky Cartographer</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Coda|Nunito" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuwuHTHhkLKHiobM9yupX4g-SxMdyQA8A&libraries=geometry,places"></script>
+  </head>
+  <body ng-app="app">
 
-<h1>This is Close Call</h1>
-<p>you know ... for help</p>
-
-</body>
+    <div class="container" ui-view>
+    </div>
+    <script src="js/bundle.js"></script>
+  </body>
 </html>
-
