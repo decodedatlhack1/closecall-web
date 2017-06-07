@@ -1,14 +1,29 @@
+* {
+  box-sizing: border-box; }
+
 html, body {
   width: 100%;
   height: 100%;
   margin: 0px;
-  padding: 0px; }
-
-.container, .root-container {
-  width: 100%;
-  height: 100%;
+  padding: 0px;
   display: flex;
   justify-content: center; }
+
+.container {
+  width: 360px;
+  height: 640px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  border: 2px solid black; }
+
+input {
+  padding: 0px 10px; }
+
+@font-face {
+  font-family: Helvetica Neue;
+  src: local("HelveticaNeue-CondensedBlack"), url(MgOpenModernaBold.ttf); }
 
 .home {
   background: #0078D7;
@@ -16,17 +31,22 @@ html, body {
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-direction: column; }
 
-.closecall-home-banner {
+.home-title {
   padding-top: 134px;
-  height: 72px;
-  width: 100%;
+  width: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; }
+
+.closecall-home-banner {
   color: #7EBBEB;
   font-family: "Helvetica Neue";
   font-size: 60px;
   line-height: 74px;
-  text-align: center;
   display: flex;
   justify-content: center;
   margin: 0px; }
@@ -41,8 +61,145 @@ html, body {
   color: #7EBBEB;
   font-family: ".SF NS Text";
   font-size: 10px;
-  font-weight: bold;
-  line-height: 23px;
-  text-align: center; }
+  font-weight: bold; }
+
+.sign-in-button {
+  margin: 30px;
+  align-self: flex-end;
+  color: white;
+  background: transparent;
+  border: none; }
+
+.register {
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px; }
+  .register .bottom-buttons {
+    width: 100%;
+    display: flex;
+    background: white; }
+    .register .bottom-buttons button {
+      background: transparent;
+      border: none; }
+    .register .bottom-buttons .prev-button {
+      margin-right: auto;
+      color: #2E78D0; }
+    .register .bottom-buttons .next-button {
+      margin-left: auto;
+      color: #2E78D0; }
+    .register .bottom-buttons .edit-button {
+      margin-right: auto;
+      border-radius: 100%;
+      border: 2px solid #2E78D0;
+      color: #2E78D0; }
+    .register .bottom-buttons .sign-up-button {
+      margin-left: auto;
+      color: #2E78D0; }
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+  .register-container .register-header {
+    width: 100%;
+    color: #0078D7;
+    font-family: "Helvetica Neue";
+    font-size: 40px;
+    line-height: 39px;
+    margin-bottom: 30px; }
+  .register-container .register-subheader {
+    color: #59717F;
+    margin-top: 30px;
+    margin-bottom: 10px; }
+  .register-container .register-attribute {
+    color: #2E78D0; }
+  .register-container .register-option-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .register-container .register-option-list label {
+      margin-right: auto;
+      height: 20px;
+      color: #000100;
+      font-family: ".AppleSystemUIFont";
+      font-size: 15px;
+      line-height: 20px;
+      margin-bottom: 10px; }
+    .register-container .register-option-list .register-text {
+      box-sizing: border-box;
+      height: 32px;
+      width: 100%;
+      border: 2px solid #7A7A7A;
+      background-color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 20px; }
+    .register-container .register-option-list .toggle-group {
+      display: flex;
+      flex-direction: column;
+      align-self: flex-start;
+      height: 100%; }
+    .register-container .register-option-list .checkboxes {
+      width: 100%;
+      display: flex;
+      flex-direction: row; }
+      .register-container .register-option-list .checkboxes .checkbox {
+        outline: 2px solid #000000;
+        margin-right: 20px;
+        border: none; }
+
+#switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 22px;
+  margin-bottom: 30px; }
+
+#switch input {
+  display: none; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s; }
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s; }
+
+input:checked + .slider {
+  background-color: #2196F3; }
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3; }
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px); }
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px; }
+
+.slider.round:before {
+  border-radius: 50%; }
 
 /*# sourceMappingURL=main.css.map */
